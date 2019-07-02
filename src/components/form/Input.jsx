@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Input = ({type, inputFunc}) => (
-  <input type={type} onChange={event => inputFunc(event.target.value)} />
+export const Input = ({type, onChange}) => (
+  <input type={type} onChange={event => onChange(event.target.value)} />
 )

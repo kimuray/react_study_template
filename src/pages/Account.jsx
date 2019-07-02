@@ -19,13 +19,19 @@ export class Account extends React.Component {
     this.setState({password: password})
   }
 
+  sendInput() {
+    alert(`
+      email: ${this.state.email}, passwrod: ${this.state.password}
+    `)
+  }
+
   render() {
     return (
       <div>
         <h1>アカウント入力</h1>
-        <Input inputFunc={(value) => this.setEmail(value)} />
-        <Input inputFunc={(value) => this.setPassword(value)}/>
-        <Button label="クリック" onClick={() => console.log('test')} />
+        <Input onChange={(value) => this.setEmail(value)} />
+        <Input onChange={(value) => this.setPassword(value)}/>
+        <Button label="クリック" onClick={() => this.sendInput()} />
       </div>
     )
   }
