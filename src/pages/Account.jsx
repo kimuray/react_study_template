@@ -20,9 +20,7 @@ export class Account extends React.Component {
   }
 
   sendInput() {
-    alert(`
-      email: ${this.state.email}, passwrod: ${this.state.password}
-    `)
+    this.props.history.push("/reserve")
   }
 
   render() {
